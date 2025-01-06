@@ -1,0 +1,44 @@
+/* result-specific.css */
+.result-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+.hand-display {
+    text-align: center;
+}
+
+.hand-display img {
+    width: 100px;
+    height: 100px;
+}
+
+.hand-label {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.result-message {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.retry-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.retry-button:hover {
+    background-color: darkorange;
+}

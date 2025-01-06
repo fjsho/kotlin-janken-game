@@ -5,75 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>結果発表 - じゃんけんゲーム</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f4f8;
-        }
-
-        .container {
-            text-align: center;
-            background-color: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .result-area {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 50px;
-            margin-bottom: 20px;
-        }
-
-        .hand-display {
-            text-align: center;
-        }
-
-        .hand-display img {
-            width: 100px;
-            height: 100px;
-        }
-
-        .hand-label {
-            margin-top: 10px;
-            font-size: 18px;
-        }
-
-        .result-message {
-            font-size: 20px;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-
-        .retry-button {
-            padding: 15px 30px;
-            font-size: 18px;
-            font-weight: bold;
-            background-color: orange;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .retry-button:hover {
-            background-color: darkorange;
-        }
-
-    </style>
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/result-specific.css">
 </head>
 
 <body>
@@ -101,9 +34,9 @@
 
     // 画像のマッピング
     const handImages = {
-        'グー': './janken_gu.png',
-        'チョキ': './janken_choki.png',
-        'パー': './janken_pa.png',
+        'グー': './images/janken_gu.png',
+        'チョキ': './images/janken_choki.png',
+        'パー': './images/janken_pa.png',
     };
 
     // 画像を設定
