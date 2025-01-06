@@ -1,10 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
+
 <head>
   <meta charset="UTF-8">
-  <title>welcome janken-game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>じゃんけんゲーム</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f4f8;
+    }
+
+    .container {
+        text-align: center;
+        background-color: white;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+
+    .button-group {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .button {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: none;
+        background-color: #d9e8f5;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .button.selected {
+        background-color: #4a90e2;
+        color: white;
+    }
+
+    .play-button {
+        margin-top: 20px;
+        padding: 15px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: grey;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .play-button.active {
+        background-color: #4caf50;
+        cursor: pointer;
+    }
+
+    .play-button:disabled {
+        background-color: grey;
+        cursor: not-allowed;
+    }
+
+    footer {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #555;
+    }
+
+    footer a {
+        color: #4a90e2;
+        text-decoration: none;
+    }
+  </style>
 </head>
+
 <body>
-<h1>Hi👋 welcome to janken-game stadium 😚</h1>
+<div class="container">
+  <h1>じゃんけんゲーム</h1>
+  <div class="button-group">
+    <button class="button" data-hand="グー">✊ グー</button>
+    <button class="button" data-hand="チョキ">✌ チョキ</button>
+    <button class="button" data-hand="パー">✋ パー</button>
+  </div>
+  <button class="play-button" id="playButton" disabled>対戦を開始する</button>
+  <footer>
+    <a href="#">このゲームの遊び方</a>
+  </footer>
+</div>
+
+<script>
+  const buttons = document.querySelectorAll('.button');
+  const playButton = document.getElementById('playButton');
+  let selectedHand = null;
+
+  buttons.forEach(button => {
+      button.addEventListener('click', () => {
+          // 選択状態をリセット
+          buttons.forEach(btn => btn.classList.remove('selected'));
+
+          // 選択されたボタンに状態を適用
+          button.classList.add('selected');
+          selectedHand = button.getAttribute('data-hand');
+
+          // 対戦開始ボタンを有効化
+          playButton.classList.add('active');
+          playButton.disabled = false;
+      });
+  });
+
+  playButton.addEventListener('click', () => {
+      alert(`${selectedHand}を選択しました！対戦を開始します。`);
+      // 対戦結果画面遷移のロジックをここに追加予定。
+  });
+</script>
 </body>
+
 </html>
