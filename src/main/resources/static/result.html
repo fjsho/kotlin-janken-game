@@ -94,16 +94,16 @@
 </div>
 
 <script>
-    // 仮のデータ（サーバー側から受け取る実際のデータを設定する）
+    // ローカルストレージからデータを取得
     const userHand = localStorage.getItem('userHand') || '✊';
     const computerHand = localStorage.getItem('computerHand') || '✌';
     const result = localStorage.getItem('result') || '引き分け';
 
     // 画像のマッピング
     const handImages = {
-        'グー': 'https://example.com/rock.png',
-        'チョキ': 'https://example.com/scissors.png',
-        'パー': 'https://example.com/paper.png'
+        'グー': './janken_gu.png',
+        'チョキ': './janken_choki.png',
+        'パー': './janken_pa.png',
     };
 
     // 画像を設定
