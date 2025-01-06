@@ -123,9 +123,32 @@
       });
   });
 
+  async function playApi(selectedHand) {
+      try {
+          const response = await fetch('http://localhost:8080/api/janken/play', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({ userHand: selectedHand })
+          });
+
+          if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+
+          const data = await response.json();
+          alert(`あなたの手: ${data.userHand}\nコンピュータの手: ${data.computerHand}\n結果: ${data.result}`);
+      } catch (error) {
+          console.error('APIリクエストエラー:', error);
+          alert('エラーが発生しました。再試行してください。');
+      }
+  }
+
   playButton.addEventListener('click', () => {
-      alert(`${selectedHand}を選択しました！対戦を開始します。`);
-      // 対戦結果画面遷移のロジックをここに追加予定。
+      if (selectedHand) {
+          playApi(selectedHand);
+      }
   });
 </script>
 </body>
