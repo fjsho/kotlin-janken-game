@@ -1,0 +1,27 @@
+/* help-specific styles */
+.help-container {
+    max-width: 600px;
+}
+
+.help-content {
+    font-size: 16px;
+    margin-bottom: 30px;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.home-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.home-button:hover {
+    background-color: #357ab8;
+}
