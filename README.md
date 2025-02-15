@@ -10,7 +10,9 @@ SpringInitializrでプロジェクトを作成:  [作成したプロジェクト
 - [ ] owaspzapでセキュリティチェックを行う
 - [ ] テストコードを書く
   - Junit or Kotest導入
-- [ ]CI/CDを導入する
+- [ ] CI/CDを導入する
+- [ ] じゃんけんの結果をDBに管理する（H20でOK）
+- [ ] DBをMySQLに変更する
 
 
 ### 作業日報
