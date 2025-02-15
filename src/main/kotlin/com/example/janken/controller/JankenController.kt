@@ -15,6 +15,7 @@ class JankenController {
         return JankenResponse(request.userHand, computerHand, result)
     }
 
+    // TODO サービスクラスに切り出す
     private fun judgeResult(userHand: String, computerHand: String): String {
         return when {
             userHand == computerHand -> "引き分け"
