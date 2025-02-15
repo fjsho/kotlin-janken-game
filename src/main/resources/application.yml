@@ -2,3 +2,13 @@
 spring:
   application:
     name: 'janken-game'
+
+# logging
+logging:
+  level:
+    root: INFO
+    com.example.janken: DEBUG
+    org.springframework.web: DEBUG
+    org.hibernate: DEBUG
+  file:
+    name: logs/janken-game.log
